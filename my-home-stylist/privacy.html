@@ -33,7 +33,7 @@
 
 <div class="eyebrow">Stylist AI</div>
 <h1>Privacy Policy</h1>
-<div class="updated">Last updated: 20 August 2026</div>
+<div class="updated">Last updated: 6 September 2026</div>
 
 <p>Stylist AI (“the app”, “we”, “us”) is an AI interior design app. You photograph a room, choose a
 style, and the app returns a redesigned version of that room. This policy explains exactly what
@@ -49,13 +49,17 @@ happens to your data. It is written to be read, not to be survived.</p>
 <h2>Deleting your data</h2>
 <p>This is first because it is the thing people most often want and most often cannot find.</p>
 <ul>
+  <li><strong>In the app: Settings → Delete my data.</strong> It lists exactly what will go, asks
+  you to type DELETE, and then erases your designs, your setup answers, your anonymous identifier
+  and — if you made one — your sign-in account, all in one step. Nothing is kept back.</li>
   <li><strong>Your designs and your setup answers</strong> live on your device. Deleting the app
-  removes them immediately and completely. There is no copy on our servers to chase.</li>
+  also removes them immediately and completely. There is no copy on our servers to chase.</li>
   <li><strong>Your finished design</strong> is deleted from our image provider automatically
   <strong>within one hour</strong> of being made. You do not have to ask, and you cannot forget to.</li>
-  <li><strong>Anything else tied to your installation</strong> — the anonymous request log — can be
-  deleted on request. Email <a href="mailto:elevatelogiclabs@gmail.com">elevatelogiclabs@gmail.com</a> with the anonymous identifier
-  shown on the app&rsquo;s Settings screen and we will remove it within 30 days.</li>
+  <li><strong>The anonymous request log</strong> on our server can be deleted on request. Email
+  <a href="mailto:elevatelogiclabs@gmail.com">elevatelogiclabs@gmail.com</a> with the “Your ID”
+  shown on the app&rsquo;s Settings screen and we will remove it within 30 days. Usage events already
+  sent to PostHog carry only that identifier, which “Delete my data” resets.</li>
 </ul>
 
 <h2>1. Information we collect</h2>
@@ -81,17 +85,37 @@ servers. If you delete the app, they are deleted with it.</p>
 
 <h3>Purchase information</h3>
 <p>Subscriptions are handled by RevenueCat and by Apple or Google. We receive an anonymous
-identifier and your subscription status (active, trialling, expired). <strong>We never see your
+identifier and your subscription status (active or expired). <strong>We never see your
 payment card details</strong> — those are handled entirely by the app store.</p>
+
+<h3>The optional sign-in, when you buy a makeover pack</h3>
+<p>You never need an account to use the app. The one time we offer a sign-in is when you buy a
+pack of makeovers, so the pack can be restored if you change phones — and you can decline it. If
+you do sign in with Apple or Google, we receive an account identifier and, where the provider
+shares it, your email address. We use the email for nothing except showing you which account
+holds your packs and restoring them; we do not send mail to it. Deleting your data deletes this
+account too.</p>
 
 <h3>Technical information</h3>
 <p>Our server records the anonymous identifier and the time of each design request, in order to
 apply fair-use limits and prevent abuse. This is not linked to any identity.</p>
 
+<h3>Usage and crash information</h3>
+<p>So that we can see where the app is confusing and when it breaks, we record a small set of
+events — for example <em>the app was opened</em>, <em>a design was requested</em>, <em>the
+subscription screen was shown</em>, <em>a purchase was made</em> — and, if the app crashes, a
+technical report of where in the code it happened. These are processed by PostHog (usage) and
+Sentry (crashes). <strong>They never include your photos, your designs, the text you type, your
+name or your email.</strong> The only identifier attached is the same anonymous one shown as
+“Your ID” in Settings, so that a purchase can be matched to the screens that led to it. We do not
+record your screen, and we do not use any of this for advertising. Choosing “Delete my data”
+resets this identifier so nothing further can be connected to you.</p>
+
 <h3>What we do not collect</h3>
 <ul>
-  <li>No name, email address, postal address or phone number</li>
-  <li>No account or password</li>
+  <li>No name, postal address or phone number — and no email address unless you choose the
+    optional sign-in when buying a pack, as described above</li>
+  <li>No password, ever</li>
   <li>No contacts, location, health or financial data</li>
   <li>No advertising identifiers, and no third-party ad tracking</li>
 </ul>
@@ -102,7 +126,9 @@ apply fair-use limits and prevent abuse. This is not linked to any identity.</p>
   <li><strong>Camera</strong> — only if you choose to take a photo instead of selecting one.</li>
   <li><strong>Saving to your photo library</strong> — only when you tap save on a finished design.</li>
   <li><strong>Notifications</strong> — optional, and only if you turn them on. Used to tell you a
-  design is ready or that a free trial is about to end. Never used for advertising.</li>
+  design is ready, or to nudge you if you left the two-minute setup unfinished. Never used for
+  advertising, and never sent from a server — your phone schedules them itself, so no record of you
+  exists anywhere.</li>
 </ul>
 <p>You can change any of these at any time in your device settings, and the app continues to work
 without them (except where a photo is obviously required).</p>
@@ -123,7 +149,9 @@ you for marketing by third parties.</p>
   <li><strong>Supabase</strong> — hosts the server that receives your design request.</li>
   <li><strong>fal.ai</strong> — performs the AI image generation.</li>
   <li><strong>RevenueCat</strong> — manages subscription status.</li>
-  <li><strong>Apple / Google</strong> — process payments and distribute the app.</li>
+  <li><strong>PostHog</strong> — counts the usage events described above (hosted in the United States).</li>
+  <li><strong>Sentry</strong> — receives crash reports (hosted in the United States).</li>
+  <li><strong>Apple / Google</strong> — process payments, distribute the app, and provide the optional sign-in.</li>
 </ul>
 
 <h2>5. Keeping data</h2>
